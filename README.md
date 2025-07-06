@@ -31,6 +31,9 @@ Start the task creator:
 poetry run run-task-creator
 ```
 
+You can also explore the API using OpenAPI at `http://localhost:8080/docs`.
+Obviously, replace `8080` with whatever port you have configured in `config.yaml`.
+
 ## If I had more time
 
 - Wrap the simulation scripts and the application in a docker-compose file  
