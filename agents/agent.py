@@ -2,9 +2,9 @@ import asyncio
 import random
 import httpx
 
-from pharmacy.core import config
+from pharmacy.core.config import Config
 
-API_URL = f"http://localhost:{config.port}"
+API_URL = f"http://localhost:{Config().port}"
 AUTH_HEADER = {"Authorization": "Bearer secret-token"}
 
 class Agent:

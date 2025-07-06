@@ -3,9 +3,9 @@ import random
 import string
 import httpx
 
-from pharmacy.core import config
+from pharmacy.core.config import Config
 
-API_URL = f"http://localhost:{config.port}"
+API_URL = f"http://localhost:{Config().port}"
 AUTH_HEADER = {"Authorization": "Bearer secret-token"}
 
 def generate_payload():
@@ -24,10 +24,10 @@ async def create_task():
         except Exception as e:
             print(f"Error creating task: {e}")
 
-async def main():
+async def run():
     while True:
         await create_task()
         await asyncio.sleep(random.randint(30, 60))
 
-if __name__ == "__main__":
-    asyncio.run(main())
+def main():
+    asyncio.run(run())
