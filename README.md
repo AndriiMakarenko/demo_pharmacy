@@ -14,7 +14,7 @@ poetry install
 Start the API server:
 
 ```bash
-poetry run uvicorn pharmacy.main:app --reload
+poetry run python -m pharmacy.main
 ```
 
 In separate terminals:
